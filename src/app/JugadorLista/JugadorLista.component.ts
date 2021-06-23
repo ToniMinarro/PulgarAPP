@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { EquipoComponent } from '../equipo/equipo.component';
 import { JugadorComponent } from '../jugador/jugador.component';
 
 @Component({
@@ -8,20 +9,12 @@ import { JugadorComponent } from '../jugador/jugador.component';
 })
 export class JugadorListaComponent implements OnInit {
 
+  @Input() equipo:EquipoComponent;
   @Input() jugadores:Array<JugadorComponent>;
   @Input() nombreEquipo:string;
-  
+
   constructor() { }
 
   ngOnInit() {
-  }
-
-  eliminarJugador(dorsal:Number) {
-    for (let jugador of this.jugadores) {
-      if (jugador.getDorsal() === dorsal) {
-        this.jugadores.splice(this.jugadores.indexOf(jugador), 1);
-        break;
-      }
-    }
   }
 }

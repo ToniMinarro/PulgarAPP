@@ -18,7 +18,7 @@
 				<td>{{jugador.getNombreJugador()}}</td>
 				<td>{{jugador.getDorsal()}}</td>
 				<td>{{jugador.getPosicion()}}</td>
-				<td><img src='assets/img/borrar.png' (click)="eliminarJugador(jugador.getDorsal())"/></td>
+        <td><img src='assets/img/borrar.png' (click)="equipo.expulsarJugador(jugador)"/></td>
 			</tr>
 		</tbody>
 	</table>
