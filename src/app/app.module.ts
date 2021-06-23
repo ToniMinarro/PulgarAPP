@@ -17,4 +17,5 @@ import { JugadorComponent } from './jugador/jugador.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

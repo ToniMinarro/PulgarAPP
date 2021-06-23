@@ -1,21 +1,26 @@
-<!DOCTYPE html>
-<html xmlns='http://www.w3.org/1999/xhtml' lang="es">
-	<head>
-		<meta name="author" content="Antonio José Miñarro Miñarro - antonio_jose91@hotmail.es">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	</head>
+<div id="cabecera">
+	<h1 class="display-1 text-center">{{title}}</h1>
+</div>
 
-	<body>
+<div class="container">
 
-		<div id="cabecera">
-			<h1 class="display-1 text-center">{{title}}</h1>
-		</div>
+	<table id="tablaJugadores" class="my-5">
+		<thead>
+			<tr>
+				<th>Dorsal</th>
+				<th>Nombre</th>
+				<th>Posición</th>
+				<th>Opciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let jugador of this.jugadores">
+				<td>{{jugador.nombreJugador}}</td>
+				<td>{{jugador.dorsal}}</td>
+				<td>{{jugador.posicion}}</td>
+				<td><img src='../assets/img/borrar.png' (click)="eliminarJugador(jugador.dorsal)"/></td>
+			</tr>
+		</tbody>
+	</table>
 
-		<div class="container">
-		
-			<table id="tablaJugadores"></table>
-		
-		</div>
-		
-	</body>
-</html>
+</div>
