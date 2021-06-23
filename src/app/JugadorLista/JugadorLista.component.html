@@ -1,8 +1,8 @@
 <div class="container">
 
-  <div id="cabecera" class="mt-5">
+<div id="cabecera" class="mt-5">
     <h5 class="display-5 text-center">Jugadores de {{nombreEquipo}}</h5>
-  </div>
+</div>
 
 	<table id="tablaJugadores" class="my-5">
 		<thead>
@@ -15,9 +15,9 @@
 		</thead>
 		<tbody>
       <tr *ngFor="let jugador of this.jugadores">
-				<td>{{jugador.getNombreJugador()}}</td>
-				<td>{{jugador.getDorsal()}}</td>
-				<td>{{jugador.getPosicion()}}</td>
+		<td>{{jugador.getDorsal()}}</td>		
+		<td>{{jugador.getNombreJugador()}}</td>
+		<td>{{jugador.getPosicion()}}</td>
         <td><img src='assets/img/borrar.png' (click)="equipo.expulsarJugador(jugador)"/></td>
 			</tr>
 		</tbody>
