@@ -10,6 +10,7 @@ export class JugadorListaComponent implements OnInit {
 
   @Input() jugadores:Array<JugadorComponent>;
   @Input() nombreEquipo:string;
+  
   constructor() { }
 
   ngOnInit() {
@@ -17,7 +18,7 @@ export class JugadorListaComponent implements OnInit {
 
   eliminarJugador(dorsal:Number) {
     for (let jugador of this.jugadores) {
-      if (jugador.dorsal === dorsal) {
+      if (jugador.getDorsal() === dorsal) {
         this.jugadores.splice(this.jugadores.indexOf(jugador), 1);
         break;
       }

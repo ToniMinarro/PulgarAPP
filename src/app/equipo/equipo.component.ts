@@ -9,7 +9,7 @@ import { JugadorComponent } from '../jugador/jugador.component';
 export class EquipoComponent implements OnInit {
 
   private nombreEquipo:string = 'PulgaraCF';
-  jugadores:JugadorComponent[] = new Array();
+  private jugadores:JugadorComponent[] = new Array();
 
   constructor() { }
 
@@ -22,4 +22,6 @@ export class EquipoComponent implements OnInit {
 
   getNombreEquipo():string { return this.nombreEquipo; }
   setNombreEquipo(nombre:string):void { this.nombreEquipo = nombre; }
+  getJugadores():JugadorComponent[] { return this.jugadores; }
+  setJugadores(jugadores:JugadorComponent[]) { this.jugadores = jugadores; }
 }

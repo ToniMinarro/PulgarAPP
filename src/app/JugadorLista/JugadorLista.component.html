@@ -15,10 +15,10 @@
 		</thead>
 		<tbody>
       <tr *ngFor="let jugador of this.jugadores">
-				<td>{{jugador.nombreJugador}}</td>
-				<td>{{jugador.dorsal}}</td>
-				<td>{{jugador.posicion}}</td>
-				<td><img src='assets/img/borrar.png' (click)="eliminarJugador(jugador.dorsal)"/></td>
+				<td>{{jugador.getNombreJugador()}}</td>
+				<td>{{jugador.getDorsal()}}</td>
+				<td>{{jugador.getPosicion()}}</td>
+				<td><img src='assets/img/borrar.png' (click)="eliminarJugador(jugador.getDorsal())"/></td>
 			</tr>
 		</tbody>
 	</table>
