@@ -15,6 +15,8 @@ export class AppComponent {
   constructor() { this.onInit(); }
 
   onInit() {
+    
+    
     // PORTERO
     this.jugadores.push(new JugadorComponent("KikeT", 1, "PT"));
 
@@ -34,8 +36,9 @@ export class AppComponent {
     this.jugadores.push(new JugadorComponent("GuillermoP", 9, "SD"));
     this.jugadores.push(new JugadorComponent("RubénI", 12, "DC"));
 
+    this.equipo.setJugadores(this.jugadores);
 
     // Rellenamos el equipo con 11 jugadores
-    for(let jugador of this.jugadores) { this.equipo.ficharJugador(jugador); }
+    // for(let jugador of this.jugadores) { this.equipo.ficharJugador(jugador); }
   }
 }
