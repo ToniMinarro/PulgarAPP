@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div id="cabecera" class="mt-5">
+    <h5 class="display-5 text-center">Jugadores de {{nombreEquipo}}</h5>
+  </div>
+
+	<table id="tablaJugadores" class="my-5">
+		<thead>
+			<tr>
+				<th>Dorsal</th>
+				<th>Nombre</th>
+				<th>Posición</th>
+				<th>Opciones</th>
+			</tr>
+		</thead>
+		<tbody>
+      <tr *ngFor="let jugador of this.jugadores">
+				<td>{{jugador.nombreJugador}}</td>
+				<td>{{jugador.dorsal}}</td>
+				<td>{{jugador.posicion}}</td>
+				<td><img src='assets/img/borrar.png' (click)="eliminarJugador(jugador.dorsal)"/></td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>

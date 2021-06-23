@@ -1,26 +1,5 @@
 <div id="cabecera">
-	<h1 class="display-1 text-center">{{title}}</h1>
+	<h1 class="display-1 text-center">{{title}} Angular Test APP</h1>
 </div>
 
-<div class="container">
-
-	<table id="tablaJugadores" class="my-5">
-		<thead>
-			<tr>
-				<th>Dorsal</th>
-				<th>Nombre</th>
-				<th>Posición</th>
-				<th>Opciones</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr *ngFor="let jugador of this.jugadores">
-				<td>{{jugador.nombreJugador}}</td>
-				<td>{{jugador.dorsal}}</td>
-				<td>{{jugador.posicion}}</td>
-				<td><img src='../assets/img/borrar.png' (click)="eliminarJugador(jugador.dorsal)"/></td>
-			</tr>
-		</tbody>
-	</table>
-
-</div>
+<app-JugadorLista [jugadores]="jugadores" [nombreEquipo]="title"></app-JugadorLista>

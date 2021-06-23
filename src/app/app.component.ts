@@ -38,13 +38,4 @@ export class AppComponent {
     // Rellenamos el equipo con 11 jugadores
     for(let jugador of this.jugadores) { this.equipo.ficharJugador(jugador); }
   }
-
-  eliminarJugador(dorsal:Number) {
-    for (let jugador of this.jugadores) {
-      if (jugador.dorsal === dorsal) {
-        this.jugadores.splice(this.jugadores.indexOf(jugador), 1);
-        break;
-      }
-    }
-  }
 }

@@ -8,7 +8,7 @@ import { JugadorComponent } from '../jugador/jugador.component';
 })
 export class EquipoComponent implements OnInit {
 
-  nombreEquipo:string = 'PulgaraCF';
+  private nombreEquipo:string = 'PulgaraCF';
   jugadores:JugadorComponent[] = new Array();
 
   constructor() { }
@@ -19,10 +19,7 @@ export class EquipoComponent implements OnInit {
 	ficharJugador(jugador:JugadorComponent) {
 		this.jugadores.length < 11 ? this.jugadores.push(jugador) : alert("No puedes añadir más de 11 jugadores a la plantilla");
 	}
-	
-	listarJugadores() {   
-		for (let jugador of this.jugadores) {
-			alert(jugador.nombreJugador + " - Dorsal " + jugador.dorsal + " - Juega de " + jugador.posicion);
-		}
-	}
+
+  getNombreEquipo():string { return this.nombreEquipo; }
+  setNombreEquipo(nombre:string):void { this.nombreEquipo = nombre; }
 }
