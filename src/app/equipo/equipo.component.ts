@@ -20,6 +20,10 @@ export class EquipoComponent implements OnInit {
 		this.jugadores.length < 11 ? this.jugadores.push(jugador) : alert("No puedes añadir más de 11 jugadores a la plantilla");
 	}
 
+  expulsarJugador(jugador:JugadorComponent) {
+    this.jugadores.splice(this.jugadores.indexOf(jugador), 1);
+  }
+
   getNombreEquipo():string { return this.nombreEquipo; }
   setNombreEquipo(nombre:string):void { this.nombreEquipo = nombre; }
   getJugadores():JugadorComponent[] { return this.jugadores; }
